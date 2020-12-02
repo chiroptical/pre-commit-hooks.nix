@@ -36,6 +36,14 @@ in
             "Ansible linter";
           entry = "${tools.ansible-lint}/bin/ansible-lint";
         };
+      stack-script =
+        {
+          name = "stack-script";
+          description =
+            "Run stack scripts";
+          entry = "${pkgs.stack}/bin/stack";
+          files = "\\.hs$";
+        };
       black =
         {
           name = "black";
